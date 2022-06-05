@@ -1,5 +1,8 @@
 * {box-sizing:border-box}
 
+.nav2{
+  background-color:#2f3338 !important;
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
