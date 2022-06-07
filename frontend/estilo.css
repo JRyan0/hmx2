@@ -6,3 +6,12 @@
 .textnav{
   color:#e8e8e8 !important; 
 }
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.color{
+  color:#2f3338 !important;
+}
