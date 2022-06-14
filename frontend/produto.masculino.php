@@ -21,7 +21,6 @@
 <main class="container">
  <div class="row">
         <div class="col">
-            <div class="col-4">
                 <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="images/20220401_160452.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -30,7 +29,6 @@
                     <a href="#" class="btn btn-primary">Comprar</a>
                 </div>
                 </div>
-            </div>
         </div>
     </div>
 </main>
