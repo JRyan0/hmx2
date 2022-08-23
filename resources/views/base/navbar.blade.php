@@ -45,4 +45,4 @@
         </ul>
     </div>
 </nav>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
