@@ -17,3 +17,6 @@ use App\Http\Controllers\HmxController;
 Route::get('/', function () {
     return view('hmx.index');
 });
+Route::get('/login', function () {
+    return view('hmx.login');
+});
