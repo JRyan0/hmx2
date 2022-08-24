@@ -11,10 +11,10 @@
                 <li class="nav-item active">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
+                    <a class="nav-link" href="/login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cadastro.php">Cadastro</a>
+                    <a class="nav-link" href="/cadastro">Cadastro</a>
                 </li>
                 <li class="nav-item">
                     <span class="nav-link" style="cursor:pointer" onclick="openNav()">Carrinho</span>
@@ -28,19 +28,19 @@
     <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav" d-flex justify-content-center>
         <ul class="navbar-nav">
             <li class="nav-item" >
-                <a class="nav-link textnav" href="#">Lançamentos</a>
+                <a class="nav-link textnav" href="/Lançamentos">Lançamentos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link textnav" href="produto.masculino.php">Masculino</a>
+                <a class="nav-link textnav" href="/Masculino">Masculino</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link textnav" href="#">Feminino</a>
+                <a class="nav-link textnav" href="/Feminino">Feminino</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link textnav" href="#">Infantil</a>
+                <a class="nav-link textnav" href="/Infantil">Infantil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link textnav" href="#">Ofertas</a>
+                <a class="nav-link textnav" href="/Ofertas">Ofertas</a>
             </li>
         </ul>
     </div>

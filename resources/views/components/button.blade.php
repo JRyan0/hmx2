@@ -1,1 +1,1 @@
-<button type="{{$type }}" placeholder="{{$placeholder }}" class="btn btn-{{ $color }}">{{$label}}</button>
+<button type="{{$type }}"  style="{{ $style }}" class="btn btn-{{ $color }}">{{$label}}</button>

@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('hmx.login');
 });
+
+Route::get('/cadastro', function () {
+    return view('hmx.cadastro');
+});

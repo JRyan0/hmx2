@@ -19,6 +19,6 @@
     </div>
 </form>
 
-
-
+    @include('base.carrinhoClose')
+    @include('base.footer')
 @endsection
