@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS produtos(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `nome` TEXT NOT NULL,
+    `descricao` TEXT NOT NULL,
+    `imagem`(255) VARCHAR NOT NULL,
+    `preco` VARCHAR(10) NOT NULL,
+    PRIMARY KEY(`id`)
+)ENGINE=innoDB;

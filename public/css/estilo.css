@@ -1,9 +1,15 @@
 * {box-sizing:border-box}
 .swiper {
-  width: 1920px;
   height: 800px;
+   
 }
-
+ .swiper-slide{
+  background: #ccc;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:60px;
+}
 .nav2{
   background-color:#2f3338 !important;
 }
