@@ -1,12 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-                    <a class="navbar-brand " href="index.php"> Home☭</a>
-        </button>
+    <div class="container ">
+        
+        <a class="navbar-brand leftnav" href="index.php"> Home☭</a>
+
         <form class="form-inline my-4 my-lg-0">
-            <input class="form-control  d-flex justify-content-center"  style="width: 600px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <input class="form-control  d-flex justify-content-center centernav"  style="width: 600px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
 
         </form>
-        <div class=" d-flex justify-content-end textnav1 " id="navbarResponsive">
+        <div class=" d-flex justify-content-end textnav1 rightnav" id="navbarResponsive">
             <ul class="navbar-nav ml-4">
                 <li class="nav-item active">
                 </li>

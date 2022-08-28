@@ -1,5 +1,5 @@
 <!-- Slider main container -->
-<div class="swiper">
+<div style="{{ $style }}"  class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
