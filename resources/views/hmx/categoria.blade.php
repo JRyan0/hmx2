@@ -6,7 +6,7 @@
    
     <div class="container">
         <div class="row">
-        @if(isset($lista))
+        @if(isset($lista) && count($lista) > 0)
             @foreach($lista as $prod)
                 <div class="col-3 mb-3">
                         <div class="card">
