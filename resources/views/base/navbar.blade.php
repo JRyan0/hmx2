@@ -13,9 +13,9 @@
             <ul class="navbar-nav ml-4">
                 <li class="nav-item active">
                 </li>
-                @if(!\Auth::user())
+                @if(!Auth::user())
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logar') }}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                 @else
                     <li class="nav-item">

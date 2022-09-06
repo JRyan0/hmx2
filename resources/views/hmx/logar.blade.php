@@ -3,7 +3,7 @@
 
 @section('main')
     <div class="container">
-        <form action="{{ route('logar') }}" method="post">
+        <form action="{{ route('login') }}" method="post">
             <div class="container mt-3">
                 <h2 class="d-flex justify-content-center"style="padding-bottom: 40px; ">Login</h2>
                 <form >
