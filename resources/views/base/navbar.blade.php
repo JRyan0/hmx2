@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container ">
         
-        <a class="navbar-brand leftnav" href="/index.php"> Home☭</a>
+        <a class="navbar-brand leftnav" href="{{ route('home') }}"> Home☭</a>
 
         <form class="form-inline my-4 my-lg-0">
             <input class="form-control  d-flex justify-content-center centernav"  style="width: 600px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
@@ -12,13 +12,13 @@
                 <li class="nav-item active">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="{{ route('logar') }}">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('Cadastrar') }}">Cadastro</a>
                 </li>
                 <li class="nav-item">
-                    <span class="nav-link" style="cursor:pointer"><a href="{{ route('ver_carrinho') }}">Carrinho</a></span>
+                    <a class="nav-link" style="cursor:pointer" href="{{ route('ver_carrinho') }}">Carrinho</a>
                 </li>
             </ul>
         </div>

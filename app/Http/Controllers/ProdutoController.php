@@ -43,7 +43,7 @@ class ProdutoController extends Controller
             session(['cart' => $carrinho]);
 
         }
-        return view("hmx/index");
+        return back();
     }
     public function verCarrinho(Request $request){
         $carrinho = session('cart', []);
@@ -52,5 +52,13 @@ class ProdutoController extends Controller
         return view("hmx/carrinho", $data);
 
 
+    }
+    public function excluirCarrinho($indice, Request $request){
+        $carrinho = session('cart', []);
+        if(isset($carrinho[$indice])){
+            unset($carrinho[$indice]);
+        };
+        session(["cart" => $carrinho]);
+        return back();
     }
 }

@@ -5,5 +5,7 @@ namespace App\Models;
 
 class Usuario extends RModel
 {
-    use HasFactory;
+    protected $table = "usuarios";
+
+    protected $fillable = ['email', 'usuario', 'password', 'nome'];
 }

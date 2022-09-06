@@ -5,5 +5,7 @@ namespace App\Models;
 
 class Endereco extends RModel
 {
-    use HasFactory;
+    protected $table = "enderecos";
+
+    protected $fillable = ['logradouro', 'complemento', 'numero', 'cep', 'cidade', 'estado'];
 }

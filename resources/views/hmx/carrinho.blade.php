@@ -2,7 +2,7 @@
 @include('base.navbar')
 @section('main')
    
-    <div class="container">
+    <div class="container " style="margin-top:30px">
         <div class="row">
             @if(isset($cart) && count($cart) > 0)
                 <table class="table">
@@ -14,10 +14,10 @@
                         <th>Descrição</th>
                     </thead>  
                     <tbody>
-                        @foreach($cart as $p)
+                        @foreach($cart as $indice => $p)
                             <tr>
                                 <td>
-                                    <a href="#" class="btn btn-danger btn-sm">
+                                    <a href="{{ route('carrinho_excluir', ['indice' => $indice]) }}" class="btn btn-danger btn-sm">
                                         <i class="fa fa-trash"></i>
                                     </a>    
                                 
@@ -31,7 +31,9 @@
                     </tbody>
                 </table>
             @else
-            <p>Nenhum item no carrinho</p>
+            <div class="alert alert-danger">
+                <p class="carrinhoTitulo">Nenhum item no carrinho</p>
+            </div>
         @endif
         </div>
     </div>
