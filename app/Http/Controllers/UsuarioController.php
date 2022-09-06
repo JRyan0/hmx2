@@ -3,24 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+
 class UsuarioController extends Controller
 {
     public function logar(Request $request){
         $data = [];
 
         if($request->isMethod("POST")){
-            $usuario = $request->input("usuario");
+            $login = $request->input("usuario");
             $senha = $request->input("password");
            
-            $credential = ['usuario' => $usuario, 'password' => $senha];
+            $login = preg_replace("/[^0-9]/", "", $login);
+
+            $credential = ['usuario' => $login, 'password' => $senha];
             if(Auth::attempt($credential)){
-                dd("logado");
+                return redirect()->route("home");
             }else{
-                dd("Dados invalidos");
+                $request->session()->flash("err", "Usuário / Senha Inválidos");
+                return redirect()->route("logar");
             }
+
         }
 
+
         return view("hmx/logar", $data);
+    }
+    public function sair(Request $request){
+        Auth::logout();
+        return redirect()->route("home");
+
     }
 }

@@ -11,9 +11,15 @@
             <ul class="navbar-nav ml-4">
                 <li class="nav-item active">
                 </li>
+                @if(!\Auth::user())
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logar') }}">Login</a>
                 </li>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('sair') }}">Logout</a>
+                </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('Cadastrar') }}">Cadastro</a>
                 </li>

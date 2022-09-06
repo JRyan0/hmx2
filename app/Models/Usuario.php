@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Auth;
 
 class Usuario extends RModel implements Authenticatable
 {
@@ -14,7 +15,7 @@ class Usuario extends RModel implements Authenticatable
         return $this->getKey();
     }
     public function getAuthIdentifier(){
-        return $this->usuario;
+        return $this->login;
     }
     public function getAuthPassword(){
         return $this->password;
@@ -27,6 +28,10 @@ class Usuario extends RModel implements Authenticatable
     }
     public function getRememberTokenName(){
 
+    }
+    public function setLoginAttribute($login){
+        $value = preg_replace("/[^0-9]/", "", $login);
+        $this->atributes["login"]=$value;
     }
 
 }
