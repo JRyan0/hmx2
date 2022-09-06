@@ -3,14 +3,14 @@
 
 @section('main')
     <div class="container">
-        <form>
+        <form action="{{ route('logar') }}" method="post">
             <div class="container mt-3">
                 <h2 class="d-flex justify-content-center"style="padding-bottom: 40px; ">Login</h2>
-                <form action="{{ route('logar') }}" method="post">
+                <form >
                     @csrf
                     @include('components.field', ['type' => 'text', 'placeholder' =>'CPF', 'name' => 'usuario', 'label' => 'CPF', 'value' => ''])
 
-                    @include('components.field', ['type' => 'password', 'placeholder' =>'Senha', 'name' => 'senhaLogin', 'label' => 'Senha', 'value' => ''])
+                    @include('components.field', ['type' => 'password', 'placeholder' =>'Senha', 'name' => 'password', 'label' => 'Senha', 'value' => ''])
 
                     @include('components.button', ['type' => 'submit','style' => 'margin:auto; width:100%;', 'color' => 'dark', 'label' => 'Iniciar Sessão'])
                 </form>
