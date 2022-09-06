@@ -1,6 +1,8 @@
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container ">
-        
+
         <a class="navbar-brand leftnav" href="{{ route('home') }}"> Home☭</a>
 
         <form class="form-inline my-4 my-lg-0">
@@ -12,13 +14,13 @@
                 <li class="nav-item active">
                 </li>
                 @if(!\Auth::user())
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('logar') }}">Login</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logar') }}">Login</a>
+                    </li>
                 @else
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('sair') }}">Logout</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('sair') }}">Logout</a>
+                    </li>
                 @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('Cadastrar') }}">Cadastro</a>

@@ -6,25 +6,26 @@ use Illuminate\Http\Request;
 use App\Models\Usuario;
 use App\Models\Endereco;
 use App\Services\ClienteService;
+use Illuminate\Support\Facades\Hash;
 
 class ClienteController extends Controller
 {
     public function index(Request $request){
         $data =[];
-        
+
         return view("hmx/cadastrar", $data);
     }
     public function cadastrarCliente(Request $request){
-        
+
         $values = $request->all();
         $usuario = new Usuario();
         $usuario->fill($values);
-        $usuario->usuario = $request->input("cpf", "");
-        $usuario->password = $request->input("password", "");
-        
+        $usuario->usuario = $request->input("email", "");
+        $usuario->password = Hash::make($request->input("password", ""));
+
         $endereco = new Endereco($values);
         $endereco->logradouro = $request->input("endereco", "");
-       
+
 
         $clienteService = new ClienteService();
         $result = $clienteService->salvarUsuario($usuario, $endereco);
@@ -40,5 +41,5 @@ class ClienteController extends Controller
 
 
     }
-     
+
 }

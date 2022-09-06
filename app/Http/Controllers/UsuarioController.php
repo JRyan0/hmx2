@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
@@ -11,12 +12,11 @@ class UsuarioController extends Controller
         $data = [];
 
         if($request->isMethod("POST")){
-            $login = $request->input("usuario");
+            $login = $request->input("emailCadastro");
             $senha = $request->input("password");
-           
-            $login = preg_replace("/[^0-9]/", "", $login);
 
-            $credential = ['usuario' => $login, 'password' => $senha];
+            $credential = ['email' => $login, 'password' => $senha];
+
             if(Auth::attempt($credential)){
                 return redirect()->route("home");
             }else{
