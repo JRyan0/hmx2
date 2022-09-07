@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Categoria;
+use App\Models\ItensPedido;
+use App\Models\Pedido;
 use \App\Models\Produto;
+use App\Services\VendaService;
+use Illuminate\Support\Facades\Auth;
 
 class ProdutoController extends Controller
 {
@@ -60,5 +64,41 @@ class ProdutoController extends Controller
         };
         session(["cart" => $carrinho]);
         return back();
+    }
+    public function finalizar(Request $request){
+        $prods = session('cart', []);
+        $vendaService = new VendaService();
+        $result = $vendaService->finalizarVenda($prods, Auth::user());
+        if($result["status"] == "ok"){
+            $request->session()->forget("cart");
+        }
+        
+        $request->session()->flash($result["status"], $result["message"]);
+        return redirect()->route("ver_carrinho");
+    }
+    public function historico(Request $request){
+        $data = [];
+        
+        $idusuario = Auth::user()->id;
+        $listaPedido = Pedido::where("usuario_id", $idusuario)->orderBy("datapedido", "desc")->get();
+        $data["lista"] = $listaPedido;
+
+        return view("hmx/historico", $data);
+    }
+    public function detalhes(Request $request){
+        $idpedido = $request->input("idpedido");
+        
+        $listaItens = ItensPedido::join("produtos", "produtos.id", "=", "itens_pedidos.produto_id")
+        ->where("pedido_id", $idpedido)
+        ->get(['itens_pedidos.*', 'itens_pedidos.valor as valoritem', 'produtos.*']);
+
+        $data = [];
+        $data["listaItens"] = $listaItens;
+        return view("hmx/detalhes", $data);
+    }
+    public function pagar(Request $request){
+        $data = [];
+
+        return view("hmx/pagar", $data);
     }
 }

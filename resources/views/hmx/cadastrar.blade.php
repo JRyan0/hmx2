@@ -14,7 +14,7 @@
                                 @include('components.field', ['type' => 'text', 'placeholder' =>'Escreva seu Nome Completo', 'name' => 'nome', 'label' => 'Nome Completo', 'value' => ''])
                             </div>
                             <div class="col-6">
-                                @include('components.field', ['type' => 'email', 'placeholder' =>'Escreva seu Email', 'name' => 'emailCadastro', 'label' => 'Email', 'value' => ''])
+                                @include('components.field', ['type' => 'email', 'placeholder' =>'Escreva seu Email', 'name' => 'email', 'label' => 'Email', 'value' => ''])
                             </div>
                             <div class="col-6" id="CPF">
                                 @include('components.field', ['type' => 'text', 'placeholder' =>'Escreva seu CPF', 'name' => 'cpf', 'label' => 'CPF', 'value' => ''])

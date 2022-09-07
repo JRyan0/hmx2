@@ -8,7 +8,7 @@
                 <h2 class="d-flex justify-content-center"style="padding-bottom: 40px; ">Login</h2>
                 <form >
                     @csrf
-                    @include('components.field', ['type' => 'text', 'placeholder' =>'Email', 'name' => 'emailCadastro', 'label' => 'Email', 'value' => ''])
+                    @include('components.field', ['type' => 'text', 'placeholder' =>'Email', 'name' => 'email', 'label' => 'Email', 'value' => ''])
 
                     @include('components.field', ['type' => 'password', 'placeholder' =>'Senha', 'name' => 'password', 'label' => 'Senha', 'value' => ''])
 

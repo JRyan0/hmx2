@@ -17,14 +17,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Cadastrar') }}">Cadastro</a>
+                    </li>
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('sair') }}">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('compra_historico') }}">Minhas Compras</a>
+                    </li>
                 @endif
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Cadastrar') }}">Cadastro</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" style="cursor:pointer" href="{{ route('ver_carrinho') }}">Carrinho</a>
                 </li>

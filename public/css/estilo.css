@@ -4,6 +4,11 @@
   height: 1000%;
 
 }
+.detalhestabela{
+  text-align: center;
+  width: 100%;
+}
+
 .swiper-wrapper > .swiper-slide{
   height: 40rem;
 }

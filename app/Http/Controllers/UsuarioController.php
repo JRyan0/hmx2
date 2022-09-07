@@ -15,7 +15,7 @@ class UsuarioController extends Controller
         $data = [];
 
         if($request->isMethod("POST")){
-            $login = $request->input("emailCadastro");
+            $login = $request->input("email");
             $senha = $request->input("password");
 
             $credential = ['email' => $login, 'password' => $senha];
