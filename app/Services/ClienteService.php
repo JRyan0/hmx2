@@ -26,7 +26,7 @@ class ClienteService
         }catch(\Exception $e){
             \Log::error("ERRO", ['file' => 'ClienteService.salvarUsuario', 'message' => $e->getMessage()]);
             \DB::rollback();
-            return ['status' => 'err', 'message' => 'Náo pode cadastrar um usuário'];
+            return ['status' => 'err', 'message' => 'Näo foi possível cadastrar um usuário'];
         }
     }
 

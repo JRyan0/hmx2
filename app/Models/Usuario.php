@@ -15,7 +15,7 @@ class Usuario extends RModel implements Authenticatable
         return $this->getKey();
     }
     public function getAuthIdentifier(){
-        return $this->login;
+        return $this->email;
     }
     public function getAuthPassword(){
         return $this->password;
@@ -31,7 +31,7 @@ class Usuario extends RModel implements Authenticatable
     }
     public function setLoginAttribute($login){
         $value = preg_replace("/[^0-9]/", "", $login);
-        $this->atributes["login"]=$value;
+        $this->atributes["email"]=$value;
     }
 
 }
